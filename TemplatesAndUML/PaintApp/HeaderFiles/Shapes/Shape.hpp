@@ -6,10 +6,12 @@
 class Shape {
 
 public:
+	Shape(const Coordinates & point);
 	virtual void draw() = 0;
-	virtual bool containsCoordinates(Coordinates point) = 0;
+	virtual bool containsCoordinates(const Coordinates & point) = 0;
 	virtual ~Shape() = default;
-
+protected:
+	Coordinates Point;
 };
 #endif 
 

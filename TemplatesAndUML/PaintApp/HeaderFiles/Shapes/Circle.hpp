@@ -5,15 +5,12 @@
 class Circle : public Shape {
 
 public:
-	Circle(Coordinates * center, double radius);
+	Circle(const Coordinates & center, double radius);
 	void draw() override;
-	bool containsCoordinates(Coordinates point) override; //<-- Shape::containsCoordinates for override ?	
+	bool containsCoordinates(const Coordinates& point) override; 	
 
 private:
-	Coordinates Center;
 	double Radius;
-
-
 };
 
 #endif 

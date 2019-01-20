@@ -5,12 +5,11 @@
 class Rectangle : public Shape {
 
 public:
-	Rectangle(Coordinates * pointA, Coordinates * pointB);
+	Rectangle(const Coordinates & pointA,const Coordinates & pointB);
 	void draw() override;
-	bool containsCoordinates(Coordinates point) override; //<-- Shape::containsCoordinates for override ?	
+	bool containsCoordinates(const Coordinates & point) override; 
 
 private:
-	Coordinates  PointA;
 	Coordinates  PointB;
 
 };

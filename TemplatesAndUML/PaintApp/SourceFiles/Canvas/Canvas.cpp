@@ -20,10 +20,10 @@ void Canvas::removeShape(Shape * shape) {
 	}
 
 }
-Shape * Canvas::getShapeAt(Coordinates * coord) {
+Shape * Canvas::getShapeAt(const Coordinates & coord) {
 
 	for (Shape * shape : canvas) {
-		if (shape->containsCoordinates(*coord))
+		if (shape->containsCoordinates(coord))
 		{
 			return shape;
 		}

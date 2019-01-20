@@ -1,17 +1,17 @@
 #include "../../HeaderFiles/Shapes/Rectangle.hpp"
 #include <iostream>
-Rectangle::Rectangle(Coordinates * pointA, Coordinates * pointB) : PointA(*pointA), PointB(*pointB) {
+Rectangle::Rectangle(const Coordinates & pointA,const Coordinates & pointB) : Shape(pointA), PointB(pointB) {
 
 }
 
 void Rectangle::draw() {
-	std::cout << "I am Rectangle with point A: ("<< PointA.x << ", "<<PointA.y<<") and point B: ("<< PointB.x << ", " << PointB.y <<")"<< std::endl;
+	std::cout << "I am Rectangle with point A: ("<< Point.x << ", "<< Point.y<<") and point B: ("<< PointB.x << ", " << PointB.y <<")"<< std::endl;
 }
 
-bool Rectangle::containsCoordinates(Coordinates point) {
+bool Rectangle::containsCoordinates(const Coordinates & point) {
 
-	if (point.x >= PointA.x && point.x <= PointB.x && 
-		point.y >= PointA.y && point.y <= PointB.y) {
+	if (point.x >= Point.x && point.x <= PointB.x &&
+		point.y >= Point.y && point.y <= PointB.y) {
 
 		return true;
 	}

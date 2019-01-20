@@ -8,7 +8,7 @@ class Canvas
 public:
 	void addShape(Shape * shape);
 	void removeShape(Shape * shape);
-	Shape * getShapeAt(Coordinates * coord);
+	Shape * getShapeAt(const Coordinates & coord);
 	void update();
 
 private:
